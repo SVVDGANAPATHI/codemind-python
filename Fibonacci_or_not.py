@@ -1,5 +1,5 @@
 n=int(input())
-l=["0","1"]
+l=[0,1]
 a=0
 b=1
 for i in range(2,100):
@@ -8,12 +8,12 @@ for i in range(2,100):
     a=b
     b=c
 f=0
-for i in l:
-    if i==n:
+for i in range(len(l)):
+    if l[i]==n:
         f=1
         break
 if f==0:
     print("False")
 else:
     print("True")
-
+    
