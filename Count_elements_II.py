@@ -1,0 +1,5 @@
+n,m=map(int,input().split())
+s=set(map(int,input().split()))
+p=set(map(int,input().split()))
+s.symmetric_difference_update(p)
+print(len(s))
