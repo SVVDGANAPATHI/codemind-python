@@ -6,5 +6,4 @@ for i in range(n):
         if i!=0 and j!=0 and i!=n-1 and j!=m-1:
             s+=mat[i][j]
 print(s)
-        
     
