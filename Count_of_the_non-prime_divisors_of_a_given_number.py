@@ -1,18 +1,16 @@
-def prime(x):
-    fc=0
-    for i in range(1,x+1):
-        if x%i==0 or x==1:
-            fc+=1
-    return fc
+import math
 n=int(input())
-l=[]
-l2=[]
+def pr(x):
+    if x==1:
+        return False
+    for i in range(2,int(math.sqrt(x))+1):
+        if x%i==0:
+            return False
+    return True
+c=0
 for i in range(1,n+1):
-    if n%i==0:
-        l.append(i)
-for i in range(len(l)):
-    k=prime(l[i])
-    if k!=2:
-        l2.append(l[i])
-print(len(l2))
+    if pr(i)==False and n%i==0:
+        c+=1
+print(c)
+        
         
