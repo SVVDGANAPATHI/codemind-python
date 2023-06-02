@@ -1,0 +1,6 @@
+n=input().lower().split()
+m=input().lower().split()
+n=set(n)
+m=set(m)
+p=n.intersection(m)
+print(len(p))
