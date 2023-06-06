@@ -1,20 +1,18 @@
-def prime(x):
-    for i in range(2,x):
+import math
+def p(x):
+    if x==1:
+        return False
+    for i in range(2,int(math.sqrt(x))+1):
         if x%i==0:
             return False
     return True
-f=0
 n=int(input())
-l=[]
+f=0
 for i in range(1,n):
-    for j in range(2,n):
-        if prime(i) and prime(j):
-            if i*j==n:
-                f=1
-                l.append(i)
-                l.append(j)
-                break
+    if n%i==0 and p(i) and p(n//i):
+        f=1
+        print(i,n//i)
+        break
 if f==0:
     print("-1")
-else:
-    print(*set(l))
+    
