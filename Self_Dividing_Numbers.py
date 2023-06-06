@@ -1,14 +1,18 @@
-def self(num):
-    temp=num
-    while temp:
-        r=temp%10
-        temp=temp//10
-        if r==0 or num%r!=0:
-            return False
-    return True
 n=int(input())
 m=int(input())
+def se(x):
+    t=x
+    l=[]
+    while x:
+        l.append(x%10)
+        x=x//10
+    for i in l:
+        if i==0:
+            return False
+        if t%i!=0:
+            return False
+    return True
 for i in range(n,m+1):
-    if self(i):
+    if se(i):
         print(i,end=" ")
-        
+    
