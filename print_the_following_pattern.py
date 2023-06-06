@@ -1,9 +1,7 @@
 n=int(input())
+p=65
 for i in range(n):
     for j in range(n):
-        if i==j:
-            print("0",end="")
-        else:
-            print("x",end="")
+        print(chr(p),end=" ")
+    p+=1
     print("")
-        
